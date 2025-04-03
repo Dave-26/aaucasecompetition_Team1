@@ -2,20 +2,20 @@ import os
 import requests
 
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-REPO_OWNER = "Devershi"
+REPO_OWNER = "Devershi_P"
 REPO_NAME = "pull_request"
 HEAD_BRANCH = "feature-branch"
 BASE_BRANCH = "Devershi"
 
 def create_pull_request():
-    url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/pulls"
+    url = f"https://api.github.com/repos/{Devershi_P}/{pull_request}/pulls"
     headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
     
     data = {
         "title": "Automated Pull Request: Feature Updates",
         "body": "This PR contains automated changes.",
-        "head": HEAD_BRANCH,
-        "base": BASE_BRANCH
+        "head": feature-branch,
+        "base": Devershi
     }
     
     response = requests.post(url, headers=headers, json=data)
